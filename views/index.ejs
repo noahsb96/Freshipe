@@ -1,0 +1,13 @@
+<%- include('./partials/header.ejs') %>
+    <h1>Fresh Recipes</h1>
+
+    <ul>
+      <% for(let i = 0; i < recipes.length; i++) { %>
+        <li>
+          <h2><%= recipes[i].name %></h2>
+          <a href="/recipes/<%= recipes[i].id %>"> <img src="<%= recipes[i].img %> "></a>
+          <p>Culture: <%= recipes[i].culture %></p>
+        </li>
+      <% } %>
+    </ul>
+<%- include('./partials/footer.ejs') %>

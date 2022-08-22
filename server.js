@@ -35,7 +35,7 @@ const recipesController = require('./controllers/recipesController.js')
 app.use('/recipes', recipesController)
 
 const userController = require('./controllers/userController.js')
-app.use('/users', userConcotroller)
+app.use('/users', userController)
 
 app.get('/', (req, res) => {
     res.send('<h1>Welcome to Freshipe!</h1>')
