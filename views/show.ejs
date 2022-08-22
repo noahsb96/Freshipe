@@ -1,0 +1,12 @@
+<%- include('./partials/header.ejs') %>
+
+<a href="/recipes">Back to Home Page</a>
+<h1><%= recipe.name %></h1>
+<div id = container>
+    <img src="<%= recipe.img %>">
+    <p><%= recipe.culture %></p>
+    <p><%= recipe.ingredients %></p>
+    <p><%= recipe.directions %></p>
+</div>
+
+<%- include('./partials/footer.ejs') %>

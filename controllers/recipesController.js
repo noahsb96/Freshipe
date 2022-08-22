@@ -50,4 +50,9 @@ router.get('/seed', (req, res) => {
 	)
 })
 
+router.get('/:id', async (req, res) => {
+	const recipe = await Recipe.findById(req.params.id)
+	res.render('show.ejs', { recipe: recipe, })
+})
+
 module.exports = router
