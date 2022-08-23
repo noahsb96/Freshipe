@@ -12,7 +12,6 @@ router.get('/register', (req, res) => {
 router.post('/register', (req, res) => {
     const salt = bcrypt.genSaltSync(10)
     req.body.password = bcrypt.hashSync(req.body.password, salt)
-    console.log(req.body)
 
     User.findOne({username: req.body.username}, (err, userExists) => {
         if(userExists) {
@@ -20,7 +19,7 @@ router.post('/register', (req, res) => {
         } else {
             User.create(req.body, (err, createdUser) => {
                 req.session.currentUser = createdUser
-                res.redirect('/fruits')
+                res.redirect('/recipes')
             })
         }
     })
@@ -36,7 +35,7 @@ router.post('/signin', (req, res) => {
             const validLogin = bcrypt.compareSync(req.body.password, foundUser.password)
             if (validLogin) {
                 req.session.currentUser = foundUser
-                res.redirect('/fruits')
+                res.redirect('/recipes')
             } else {
                 res.send('Invalid username or password')
             }
@@ -48,7 +47,7 @@ router.post('/signin', (req, res) => {
 
 router.get('/signout', (req, res) => {
     req.session.destroy()
-    res.redirect('/fruits')
+    res.redirect('/recipes')
 })
 
 module.exports = router

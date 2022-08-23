@@ -1,0 +1,14 @@
+<%- include('./partials/header.ejs') %>
+
+<h1>Edit Recipe</h1>
+    <form action="/recipes/<%= recipe.id %>?_method=PUT" method="POST">
+    		
+        Name: <input id="name" type="text" name="name" value="<%=recipe.name%>"/>
+    	Ingredients: <textarea id="ingredients" type="text" name="ingredients" value="<%=recipe.ingredients%>"></textarea>
+    	Directions: <input id="directions" type="text" name="directions" value="<%=recipe.directions%>">
+        Culture: <input id="culture" type="text" name="culture" value="<%=recipe.culture%>">
+        Image Link: <input id="img" type="text" name="img" value="<%=recipe.img%>">
+        <input type="submit" name="" value="Submit Changes"/>
+    </form>
+
+<%- include('./partials/footer.ejs') %>

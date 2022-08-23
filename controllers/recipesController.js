@@ -50,9 +50,43 @@ router.get('/seed', (req, res) => {
 	)
 })
 
+router.get('/new', authRequired, (req, res) => {
+	res.render('new.ejs');
+});
+
 router.get('/:id', async (req, res) => {
 	const recipe = await Recipe.findById(req.params.id)
 	res.render('show.ejs', { recipe: recipe, })
+})
+
+router.post('/', (req, res) => {
+	Recipe.create(req.body, (error, createdRecipe) => {
+		if (error) {
+			console.log(error)
+			res.send(error)
+		} else {
+			res.redirect(`/recipes/${req.params.id}`)
+		}
+	})
+})
+
+router.delete('/:id', (req, res) => {
+	Recipe.findByIdAndRemove(req.params.id, (err, data)=> {
+		if(err) console.log(err)
+		res.redirect('/recipes')
+	})
+})
+
+router.get('/:id/edit', authRequired, (req, res) => {
+	Recipe.findById(req.params.id, (err, foundRecipe) => {
+		res.render('edit.ejs', {recipe: foundRecipe})
+	})
+})
+
+router.put('/:id', (req, res) => {
+	Recipe.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedRecipe) => {
+		res.redirect(`/recipes/${req.params.id}`)
+	})
 })
 
 module.exports = router
