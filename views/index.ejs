@@ -1,12 +1,11 @@
 <%- include('./partials/header.ejs') %>
-    <a href="/recipes/new">Add A new recipe</a>
-    <h1>Fresh Recipes</h1>
+    <h1 id = 'indexh1'>Fresh Recipes</h1>
 
     <ul>
       <% for(let i = 0; i < recipes.length; i++) { %>
         <li>
-          <h2><%= recipes[i].name %></h2>
-          <a href="/recipes/<%= recipes[i].id %>"> <img src="<%= recipes[i].img %> "></a>
+          <h2 id = 'recipeTitle'><%= recipes[i].name %></h2>
+          <a href="/recipes/<%= recipes[i].id %>"> <img id ='indexImg' src="<%= recipes[i].img %> "></a>
           <p>Culture: <%= recipes[i].culture %></p>
         </li>
       <% } %>

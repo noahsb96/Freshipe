@@ -65,7 +65,8 @@ router.post('/', (req, res) => {
 			console.log(error)
 			res.send(error)
 		} else {
-			res.redirect(`/recipes/${req.params.id}`)
+			const recipeId = createdRecipe.id
+			res.redirect(`/recipes/${recipeId}`)
 		}
 	})
 })
