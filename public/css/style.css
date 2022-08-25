@@ -116,6 +116,7 @@ nav {
 #directionUL {
     line-height: 2em;
     font-weight: 600;
+    border-bottom: #D03921 solid 1px;
 }
 
 #directionLI {
@@ -125,6 +126,7 @@ nav {
 #buttonContainer {
     display: flex;
     justify-content: center;
+    margin: 4%;
 }
 
 #showBTN {
