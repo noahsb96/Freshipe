@@ -1,3 +1,5 @@
+<%- include('./partials/header.ejs') %>
+
 <h1>Sign In</h1>
 <form action="/users/signin" method="POST">
     <fieldset>
@@ -11,5 +13,5 @@
     <input type="submit" value="Sign In">
     <p>Don't have an account yet? <button onclick="window.location.href = '/users/register'">Register</button></p>
 </form>
-</body>
-</html>
+
+<%- include('./partials/footer.ejs') %>

@@ -1,16 +1,29 @@
 <%- include('./partials/header.ejs') %>
 
-<a href="/recipes">Back to Home Page</a>
-<h1><%= recipe.name %></h1>
-<div id = container>
-    <img src="<%= recipe.img %>">
-    <p><%= recipe.culture %></p>
-    <p><%= recipe.ingredients %></p>
-    <p><%= recipe.directions %></p>
-    <button onclick="window.location.href = '/recipes/<%= recipe.id %>/edit'">Edit Product</button>
+<h1 id="showH1"><%= recipe.name %></h1>
+<h3 id = "showCulture">Culture: <%= recipe.culture %></h3>
+<div id = showContainer>
+    <img id="showImg" src="<%= recipe.img %>">
+    <% let ingredients = recipe.ingredients %>
+    <h3 id="ingredientsTitle">Ingredients</h3>
+        <ul id="ingredientUL">
+            <% for(ingredient of ingredients) { %>
+                <li id="ingredientLI"> <%= ingredient %> </li>
+            <% } %>
+        </ul>
+    <% let directions = recipe.directions %>
+    <h3 id="directionsTitle">Directions</h3>
+    <ol type="1" id="directionUL">
+        <% for(direction of directions) { %>
+            <li id="directionLI"> <%= direction %> </li>
+        <% } %>
+    </ol>
+    <div id="buttonContainer">
+        <button id="showBTN" onclick="window.location.href = '/recipes/<%= recipe.id %>/edit'">Edit Recipe</button>
+        <form id = delete action="/recipes/<%= recipe.id %>?_method=DELETE" method="POST">
+            <input id = "showBTN" type="submit" value="Delete Recipe" />  
+        </form>
+    </div>
 </div>
-<form id = delete action="/recipes/<%= recipe.id %>?_method=DELETE" method="POST">
-    <input id = deleteText type="submit" value="DELETE" />  
-</form>
 
 <%- include('./partials/footer.ejs') %>

@@ -1,9 +1,9 @@
 <%- include('./partials/header.ejs') %>
     <h1 id = 'indexh1'>Fresh Recipes</h1>
 
-    <ul>
+    <ul id = indexUL>
       <% for(let i = 0; i < recipes.length; i++) { %>
-        <li>
+        <li id = indexLI>
           <h2 id = 'recipeTitle'><%= recipes[i].name %></h2>
           <a href="/recipes/<%= recipes[i].id %>"> <img id ='indexImg' src="<%= recipes[i].img %> "></a>
           <p>Culture: <%= recipes[i].culture %></p>

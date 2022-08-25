@@ -38,7 +38,7 @@ const userController = require('./controllers/userController.js')
 app.use('/users', userController)
 
 app.get('/', (req, res) => {
-    res.send('<h1>Welcome to Freshipe!</h1>')
+    res.redirect('/recipes')
   })
   
   app.listen(PORT, () => {
