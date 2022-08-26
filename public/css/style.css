@@ -145,3 +145,96 @@ nav {
     cursor: pointer;
     margin-bottom: 4%;
 }
+
+#delete {
+    margin-left: 4%;
+}
+
+#newH1 {
+    font-family: 'Lobster', cursive;
+    color: yellow;
+    text-align: center;
+    margin: 4% 0 4%;
+    font-size: 50px;
+}
+
+#newForm {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   margin: auto;
+   text-align: center;
+}
+
+#newLabel {
+    font-size: 40px;
+    font-weight: 600;
+    color: #D03921
+}
+
+#inputBox {
+    margin-bottom: 4%;
+}
+
+#newButton {
+    height: 70px;
+    padding: 0 30px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background-color: #9A7AA0;
+    border-radius: 4px;
+    border: 1px solid #D03921;
+    cursor: pointer;
+    margin-bottom: 4%;
+}
+
+#signInForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signInField {
+    margin-bottom: 4%;
+}
+
+#signInLabel {
+    font-size: 40px;
+    font-weight: 600;
+    color: #D03921;
+}
+
+#signInInput {
+    height: 40px;
+}
+
+#registerText {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+    color: #D03921;
+    font-weight: 600;
+}
+
+#registerButton {
+    height: 70px;
+    padding: 0 30px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background-color: #9A7AA0;
+    border-radius: 4px;
+    border: 1px solid #D03921;
+    cursor: pointer;
+    margin: auto;
+}

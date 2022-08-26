@@ -1,17 +1,18 @@
-<%- include('./partials/header.ejs') %>
+<%- include('../partials/header.ejs') %>
 
-<h1>Sign In</h1>
-<form action="/users/signin" method="POST">
-    <fieldset>
-        <label for="username">Username:</label>
-        <input type="text" name="username">
+<h1 id="newH1">Sign In</h1>
+<form id="signInForm" action="/users/signin" method="POST">
+    <fieldset id="signInField">
+        <label id="signInLabel" for="username">Username:</label>
+        <input id="signInInput" type="text" name="username">
     </fieldset>
-    <fieldset>
-        <label for="password">Password:</label>
-        <input type="password" name="password">
+    <fieldset id="signInField">
+        <label id="signInLabel" for="password">Password:</label>
+        <input id="signInInput" type="password" name="password">
     </fieldset>
-    <input type="submit" value="Sign In">
-    <p>Don't have an account yet? <button onclick="window.location.href = '/users/register'">Register</button></p>
+    <input id="newButton" type="submit" value="Sign In">
 </form>
 
-<%- include('./partials/footer.ejs') %>
+    <p id="registerText">Don't have an account yet? <button id="registerButton" onclick="window.location.href = '/users/register'">Register</button></p>
+
+<%- include('../partials/footer.ejs') %>

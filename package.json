@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/noahsb96/Freshipe#readme",
   "dependencies": {
+    "autosize": "^5.0.1",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",

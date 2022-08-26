@@ -20,7 +20,7 @@
     </ol>
     <div id="buttonContainer">
         <button id="showBTN" onclick="window.location.href = '/recipes/<%= recipe.id %>/edit'">Edit Recipe</button>
-        <form id = delete action="/recipes/<%= recipe.id %>?_method=DELETE" method="POST">
+        <form id = "delete" action="/recipes/<%= recipe.id %>?_method=DELETE" method="POST">
             <input id = "showBTN" type="submit" value="Delete Recipe" />  
         </form>
     </div>

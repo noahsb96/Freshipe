@@ -1,14 +1,18 @@
 <%- include('./partials/header.ejs') %>
 
-<h1>Edit Recipe</h1>
-    <form action="/recipes/<%= recipe.id %>?_method=PUT" method="POST">
-    		
-        Name: <input id="name" type="text" name="name" value="<%=recipe.name%>"/>
-    	Ingredients: <textarea id="ingredients" type="text" name="ingredients" value="<%=recipe.ingredients%>"></textarea>
-    	Directions: <input id="directions" type="text" name="directions" value="<%=recipe.directions%>">
-        Culture: <input id="culture" type="text" name="culture" value="<%=recipe.culture%>">
-        Image Link: <input id="img" type="text" name="img" value="<%=recipe.img%>">
-        <input type="submit" name="" value="Submit Changes"/>
+<h1 id="newH1">Edit Recipe</h1>
+    <form id="newForm" action="/recipes/<%= recipe.id %>?_method=PUT" method="POST">
+    	<label id ="newLabel" for="name">Name:</label>
+        <textarea id="inputBox" type="text" name="name" placeholder="<%=recipe.name%>"></textarea>
+    	<label id ="newLabel" for="ingredients">Ingredients:</label>
+        <textarea id="inputBox" type="text" name="ingredients" placeholder="<%=recipe.ingredients%>"></textarea>
+    	<label id ="newLabel" for="directions">Directions:</label>
+        <textarea id="inputBox" type="text" name="directions" placeholder="<%=recipe.directions%>"></textarea>
+        <label id ="newLabel" for="culture">Culture:</label>
+        <textarea id="inputBox" type="text" name="culture" placeholder="<%=recipe.culture%>"></textarea>
+        <label id ="newLabel" for="img">Image Link:</label>
+        <textarea id="inputBox" type="text" name="img" placeholder="<%=recipe.img%>"></textarea>
+        <input id="newButton" type="submit" name="" value="Submit Changes"/>
     </form>
 
 <%- include('./partials/footer.ejs') %>

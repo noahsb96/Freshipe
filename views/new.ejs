@@ -1,28 +1,18 @@
 <%- include('./partials/header.ejs') %>
-    <h1>Create a recipe</h1>
+  <h1 id="newH1">Create a recipe</h1>
 
-    <form method="POST" action="/recipes">
-      <fieldset>
-        <label for="name">Name:</label>
-        <input id="name" type="text" name="name" placeholder="Enter Recipe Name">
-      </fieldset>
-      <fieldset>
-        <label for="ingredients">Ingredients:</label>
-        <input id="ingredients" type="text" name="ingredients" placeholder="List ingredients, separated by commas">
-      </fieldset>
-      <fieldset>
-        <label for="directions">Directions:</label>
-        <input id="directions" type="text" name="directions" placeholder="List directions, separated by commas">
-      </fieldset>
-      <fieldset>
-        <label for="culture">Culture:</label>
-        <input id="culture" type="text" name="culture" placeholder="What kind of culture is this dish based from?">
-      </fieldset>
-      <fieldset>
-        <label for="img">Image Link:</label>
-        <input id="img" type="text" name="img" placeholder="Link to img file">
-      </fieldset>
-      <button>Add Recipe</button>
-    </form>
+  <form id="newForm" method="POST" action="/recipes">
+    <label id ="newLabel" for="name">Name:</label>
+    <textarea id="inputBox" role="textbox" contenteditable="true" type="text" name="name" placeholder="Enter Recipe Name"></textarea>
+    <label id ="newLabel" for="ingredients">Ingredients:</label>
+    <textarea id="inputBox" type="text" name="ingredients" placeholder="List ingredients, separated by commas"></textarea>
+    <label id ="newLabel" for="directions">Directions:</label>
+    <textarea id="inputBox" type="text" name="directions" placeholder="List directions, separated by commas"></textarea>
+    <label id ="newLabel" for="culture">Culture:</label>
+    <textarea id="inputBox" type="text" name="culture" placeholder="What kind of culture is this dish based from?"></textarea>
+    <label id ="newLabel" for="img">Image Link:</label>
+    <textarea id="inputBox" type="text" name="img" placeholder="Link to img file"></textarea>
+    <button id="newButton">Add Recipe</button>
+  </form>
 
   <%- include('./partials/footer.ejs') %>
