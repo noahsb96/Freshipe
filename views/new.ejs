@@ -3,11 +3,15 @@
 
   <form id="newForm" method="POST" action="/recipes">
     <label id ="newLabel" for="name">Name:</label>
-    <textarea id="inputBox" role="textbox" contenteditable="true" type="text" name="name" placeholder="Enter Recipe Name"></textarea>
-    <label id ="newLabel" for="ingredients">Ingredients:</label>
-    <textarea id="inputBox" type="text" name="ingredients" placeholder="List ingredients, separated by commas"></textarea>
-    <label id ="newLabel" for="directions">Directions:</label>
-    <textarea id="inputBox" type="text" name="directions" placeholder="List directions, separated by commas"></textarea>
+    <textarea id="inputBox" type="text" name="name" placeholder="Enter Recipe Name"></textarea>
+    <div id="newIngredientId">Ingredient:</div>
+    <div id ="dynamicCheck">
+      <input type="button" value="Add Ingredient" onclick="createIngredient();"/>
+    </div>
+    <div id="newDirectionId">Directions:</div>
+    <div id ="dynamicCheck">
+      <input type="button" value="Add Step" onclick="createDirection();"/>
+    </div>
     <label id ="newLabel" for="culture">Culture:</label>
     <textarea id="inputBox" type="text" name="culture" placeholder="What kind of culture is this dish based from?"></textarea>
     <label id ="newLabel" for="img">Image Link:</label>

@@ -1,6 +1,7 @@
 <%- include('./partials/header.ejs') %>
-    <h1 id = 'indexh1'>Fresh Recipes</h1>
+  <h1 id = 'indexh1'>Fresh Recipes</h1>
 
+  <div class="wrapper">
     <ul id = indexUL>
       <% for(let i = 0; i < recipes.length; i++) { %>
         <li id = indexLI>
@@ -10,4 +11,5 @@
         </li>
       <% } %>
     </ul>
+  </div>
 <%- include('./partials/footer.ejs') %>
