@@ -17,6 +17,12 @@ router.get('/', async (req, res) => {
 	res.render('index.ejs', { recipes })
 })
 
+router.get('/cultures', async (req, res) => {
+    let recipes = await Recipe.find({})
+	res.render('cultures.ejs', { recipes })
+})
+
+
 // router.get('/seed', (req, res) => {
 // 	Recipe.create(
 // 		[
@@ -78,7 +84,7 @@ router.delete('/:id', (req, res) => {
 	})
 })
 
-router.get('/:id/edit', authRequired, (req, res) => {
+router.get('/:id/edit', (req, res) => {
 	Recipe.findById(req.params.id, (err, foundRecipe) => {
 		res.render('edit.ejs', {recipe: foundRecipe})
 	})

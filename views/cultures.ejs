@@ -1,0 +1,9 @@
+<%- include('./partials/header.ejs') %>
+
+<h1 id = 'indexh1'>Cultures</h1>
+
+<% for(let i = 0; i < recipes.length; i++) { %>
+    <a href="/recipes/<%= recipes[i].id %>"><h2 id = 'recipeTitle'><%= recipes[i].culture %></h2></a>
+<% } %>
+
+<%- include('./partials/footer.ejs') %>

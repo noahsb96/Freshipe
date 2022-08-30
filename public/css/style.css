@@ -1,9 +1,15 @@
 body {
     background-color: #07A0C3;
+    margin: 0;
 }
 
 nav {
     background-color: #9A7AA0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
 }
 
 #navbutton {
@@ -20,6 +26,7 @@ nav {
     border-radius: 4px;
     border: 1px solid #D03921;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .title {

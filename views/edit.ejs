@@ -3,15 +3,29 @@
 <h1 id="newH1">Edit Recipe</h1>
 <form id="newForm" action="/recipes/<%= recipe.id %>?_method=PUT" method="POST">
     <label id ="newLabel" for="name">Name:</label>
-    <textarea id="inputBox" type="text" name="name" placeholder="<%=recipe.name%>"></textarea>
+    <textarea id="inputBox" type="text" name="name"><%=recipe.name%></textarea>
+    <% let ingredients = recipe.ingredients %>
     <label id ="newLabel" for="ingredients">Ingredients:</label>
-    <textarea id="inputBox" type="text" name="ingredients" placeholder="<%=recipe.ingredients%>"></textarea>
+    <% for(ingredient of ingredients) { %>
+        <input type='text' id='inputBox' name='ingredients' value='<%= ingredient %>'>
+    <% } %>
+    <div id="newIngredientId"></div>
+    <div id ="dynamicCheck">
+        <input type="button" value="Add Ingredient" onclick="createIngredient();"/>
+    </div>
+    <% let directions = recipe.directions %>
     <label id ="newLabel" for="directions">Directions:</label>
-    <textarea id="inputBox" type="text" name="directions" placeholder="<%=recipe.directions%>"></textarea>
+    <% for(direction of directions) { %>
+        <input type='text' id='inputBox' name='directions' value='<%= direction %>'>
+    <% } %>
+    <div id="newDirectionId"></div>
+    <div id ="dynamicCheck">
+        <input type="button" value="Add Directions" onclick="createDirection();"/>
+    </div>
     <label id ="newLabel" for="culture">Culture:</label>
-    <textarea id="inputBox" type="text" name="culture" placeholder="<%=recipe.culture%>"></textarea>
+    <textarea id="inputBox" type="text" name="culture"><%=recipe.culture%></textarea>
     <label id ="newLabel" for="img">Image Link:</label>
-    <textarea id="inputBox" type="text" name="img" placeholder="<%=recipe.img%>"></textarea>
+    <textarea id="inputBox" type="text" name="img"><%=recipe.img%></textarea>
     <input id="newButton" type="submit" name="" value="Submit Changes"/>
 </form>
 
