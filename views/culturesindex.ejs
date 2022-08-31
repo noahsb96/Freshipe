@@ -1,0 +1,28 @@
+<%- include('./partials/header.ejs') %>
+<div id="culturesPage">
+    <% for(let i = 0; i < recipes.length; i++) { %>
+        <% if(i === 0) { %>
+            <h1 id = 'indexh1' class="cultureH1"><%= recipes[i].culture %></h1>
+            <div class="cultureDiv">
+                <ul id = indexUL>
+                    <li id = indexLI>
+                    <h2 id = 'recipeTitle'><%= recipes[i].name %></h2>
+                    <a href="/recipes/<%= recipes[i].id %>"> <img id ='indexImg' src="<%= recipes[i].img %> "></a>
+                    <p>Culture: <%= recipes[i].culture %></p>
+                    </li>
+                </ul>
+            </div>
+        <% } else { %>
+            <div class="cultureDiv">
+                <ul id = indexUL>
+                    <li id = indexLI>
+                    <h2 id = 'recipeTitle'><%= recipes[i].name %></h2>
+                    <a href="/recipes/<%= recipes[i].id %>"> <img id ='indexImg' src="<%= recipes[i].img %> "></a>
+                    <p>Culture: <%= recipes[i].culture %></p>
+                    </li>
+                </ul>
+            </div>
+        <% } %>
+    <% } %>
+</div>
+<%- include('./partials/footer.ejs') %>

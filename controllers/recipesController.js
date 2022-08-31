@@ -65,6 +65,11 @@ router.get('/:id', async (req, res) => {
 	res.render('show.ejs', { recipe: recipe, })
 })
 
+router.get('/culturesindex/:culture', async (req, res) => {
+	const recipes = await Recipe.find({ culture: req.params.culture })
+	res.render('culturesindex.ejs', { recipes: recipes, })
+})
+
 router.post('/', (req, res) => {
 	Recipe.create(req.body, (error, createdRecipe) => {
 		if (error) {

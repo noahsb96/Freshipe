@@ -245,3 +245,25 @@ nav {
     cursor: pointer;
     margin: auto;
 }
+
+#culturesLink {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 15px 0;
+    color: white;
+    text-decoration: none;
+}
+
+#culturesPage {
+    display: flex;
+    justify-content: center;
+}
+
+.cultureH1 {
+    position: absolute;
+    margin: auto;
+}
+
+.cultureDiv {
+    margin-top: 10%;
+}
