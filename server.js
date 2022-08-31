@@ -19,10 +19,10 @@ app.use((req, res, next) => {
 })
 
 const mongoose = require('mongoose')
-const mongoURI = 'mongodb://127.0.0.1:27017/recipes'
-mongoose.connect(mongoURI)
+const db = mongoose.connection
+mongoose.connect(process.env.MONGODB_URI)
 mongoose.connection.once('open', () => {
-	console.log('connected to mongo');
+	console.log(`connected to mongo at ${db.host}: ${db.port}`);
 });
 
 app.use(express.static('public'));
