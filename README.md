@@ -20,11 +20,12 @@ I wanted to create a website that everyone could use to post their own recipes t
 </ul>
 
 # User Stories
-As a user I want to be able to view recipes by culture
-As a user I want to be able to view a recipe when I click on it
-As a user I want to be able to create my own recipes once I log in
-As a user I want to edit and delete recipes I've made
-As a user I want to be able to navigate to the any of the other pages with the click of a button
+<ul>
+<li>As a user I want to be able to view recipes by culture</li>
+<li>As a user I want to be able to view a recipe when I click on it</li>
+<li>As a user I want to be able to create my own recipes once I log in</li>
+<li>As a user I want to edit and delete recipes I've made</li>
+<li>As a user I want to be able to navigate to the any of the other pages with the click of a button</li>
 
 # Wireframes
 ![Screenshot 2022-08-20 091925](https://user-images.githubusercontent.com/105397451/187752919-8473a8ba-9d28-4d8a-a5ca-6d0c9d3675fc.png)
