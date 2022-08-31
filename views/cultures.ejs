@@ -2,8 +2,12 @@
 
 <h1 id = 'indexh1'>Cultures</h1>
 
+<% let cultures = [] %>
 <% for(let i = 0; i < recipes.length; i++) { %>
-    <a id = 'culturesLink' href="/recipes/culturesindex/<%= recipes[i].culture %>"><h2><%= recipes[i].culture %></h2></a>
+    <% if(!cultures.includes(recipes[i].culture)) { %>
+        <a id = 'culturesLink' href="/recipes/culturesindex/<%= recipes[i].culture %>"><h2><%= recipes[i].culture %></h2></a>
+        <% cultures.push(recipes[i].culture) %>
+    <% } %>
 <% } %>
 
 <%- include('./partials/footer.ejs') %>
